@@ -4,7 +4,7 @@ This quick PHP logger writes logs in a flexible and easily modifiable format.
 You can use it by calling the addEvent function like this
 
 ```php
-addEvent('eventType', 'eventInitiator', 'eventDetails');
+addEvent('eventType', 'eventInitiator', 'eventDetails', 'eventLocation');
 ```
 
 #### Features
@@ -14,9 +14,9 @@ addEvent('eventType', 'eventInitiator', 'eventDetails');
 
 #### Example Database Output
 
-|eventID   |eventTime   |eventType |eventInitiator |eventDetails |
-|---|---|---|---|---|
-|1 |27/01/2021 16:02 |TEST |THISUSER |THIS HAPPENED |
+|eventID   |eventTime   |eventType |eventInitiator |eventDetails |eventLocation |
+|---|---|---|---|---|---|
+|1 |27/01/2021 16:02 |TEST |THISUSER |THIS HAPPENED |login|
 
 #### How to use in your projects
 Edit the configuration/connection files or use your own!
