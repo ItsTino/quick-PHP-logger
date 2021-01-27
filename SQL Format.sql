@@ -4,5 +4,6 @@ CREATE TABLE `development`.`eventlog` (
     `eventType` VARCHAR(256) NOT NULL,
     `eventInitiator` VARCHAR(512) NOT NULL,
     `eventDetails` VARCHAR(1024) NOT NULL,
+    `eventLocation` VARCHAR(256) NOT NULL,
     PRIMARY KEY (`eventID`)
 ) ENGINE = InnoDB;

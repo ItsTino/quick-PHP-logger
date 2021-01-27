@@ -1,7 +1,7 @@
 <?php
 require('dbconn.php');
 
-function addEvent($eventType, $eventInitiator, $eventDetails)
+function addEvent($eventType, $eventInitiator, $eventDetails, $eventLocation)
 {
     try {
 
@@ -11,11 +11,12 @@ function addEvent($eventType, $eventInitiator, $eventDetails)
         $eventType = filter_var($eventType, FILTER_SANITIZE_STRING);
         $eventInitiator = filter_var($eventInitiator, FILTER_SANITIZE_STRING);
         $eventDetails = filter_var($eventDetails, FILTER_SANITIZE_STRING);
+        $eventLocation = filter_var($eventLocation, FILTER_SANITIZE_STRING);
 
 
         //Prepare and bind
-        $stmt = $conn->prepare("INSERT INTO eventLog (eventType, eventInitiator, eventDetails) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $eventType, $eventInitiator, $eventDetails);
+        $stmt = $conn->prepare("INSERT INTO eventLog (eventType, eventInitiator, eventDetails, eventLocation) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $eventType, $eventInitiator, $eventDetails, $eventLocation);
 
         //Execute statement
         $stmt->execute();
