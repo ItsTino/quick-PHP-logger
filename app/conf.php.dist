@@ -1,0 +1,17 @@
+<?php
+
+if (!function_exists('getDBPass')) {
+    function getDBPass()
+    {
+        $password = "Databse Password";
+        return $password;
+    }
+}
+if (!function_exists('getDBUser')) {
+    function getDBUser()
+    {
+        $password = "Databse Password";
+        return $password;
+    }
+}
+
