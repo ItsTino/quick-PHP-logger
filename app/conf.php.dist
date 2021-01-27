@@ -3,7 +3,7 @@
 if (!function_exists('getDBPass')) {
     function getDBPass()
     {
-        $password = "Databse Password";
+        $password = "Database Password";
         return $password;
     }
 }
