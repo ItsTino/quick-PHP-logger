@@ -27,15 +27,15 @@ Edit the configuration/connection files or use your own!
 if (!function_exists('getDBPass')) {
     function getDBPass()
     {
-        $password = "Databse Password";
+        $password = "Database Password";
         return $password;
     }
 }
 if (!function_exists('getDBUser')) {
     function getDBUser()
     {
-        $password = "Databse Password";
-        return $password;
+        $username = "Database User";
+        return $username;
     }
 }
 ```
